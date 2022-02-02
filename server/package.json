@@ -1,0 +1,31 @@
+{
+  "name": "nasa-project-api",
+  "version": "1.0.0",
+  "main": "src/server.js",
+  "scripts": {
+    "test": "jest --detectOpenHandles",
+    "test-watch": "jest --watchAll",
+    "start": "node src/server.js",
+    "watch": "nodemon src/server.js",
+    "cluster": "npx pm2 start ecosystem.config.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "NSA Mission Control API",
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "dependencies": {
+    "axios": "^0.25.0",
+    "cors": "^2.8.5",
+    "csv-parse": "^5.0.4",
+    "express": "^4.17.2",
+    "nasa-project": "file:..",
+    "pm2": "^5.1.2"
+  },
+  "devDependencies": {
+    "jest": "^27.4.7",
+    "supertest": "^6.2.2"
+  }
+}
