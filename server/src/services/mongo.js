@@ -2,9 +2,8 @@ const mongoose = require('mongoose')
 
 require('dotenv').config()
 
-const config = {
-    MONGO_URL: process.env.MONGO_URL
-}
+const MONGO_URL = process.env.MONGO_URL
+
 
 mongoose.connection.once('open', () => {
     console.log('MongoDB connection ready!')
@@ -14,7 +13,7 @@ mongoose.connection.on('error', (err) => {
 })
 
 async function mongoConnect() {
-    await mongoose.connect(config.MONGO_URL)
+    await mongoose.connect(MONGO_URL)
 }
 async function mongoDisconnect() {
     await mongoose.disconnect()
