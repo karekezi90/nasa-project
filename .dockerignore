@@ -1,0 +1,8 @@
+# Igonrign .git files
+.git
+
+# Ignoring node_modules files
+*/node_modules
+
+# Igonoring public folder 
+server/public
